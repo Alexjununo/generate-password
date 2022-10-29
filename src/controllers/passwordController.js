@@ -1,4 +1,4 @@
-const { generatePasswordOperation } = require('../operations/generatePasswordOperation');
+const { generatePasswordOperation } = require('@src/operations/generatePasswordOperation');
 
 module.exports = {
     generatePassword: async (req, res) => {

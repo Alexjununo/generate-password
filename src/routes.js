@@ -4,7 +4,7 @@ const bodyParser = require('body-parser');
 const compression = require('compression');
 const methodOverride = require('method-override');
 
-const passwordController = require('./controllers/passwordController');
+const passwordController = require('@src/controllers/passwordController');
 
 const apiRouter = Router();
 

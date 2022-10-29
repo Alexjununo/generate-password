@@ -1,12 +1,14 @@
 const fs = require('fs');
 
-const { numbers, lowerCase, specialChars, upperCase } = require('../../constants');
+const { numbers, lowerCase, specialChars, upperCase } = require('@constants');
 
 const PASSWORD_LENGTH = 16;
-const BACKUP_PATH = `${__dirname}/../../backup/index.json`;
+const BACKUP_PATH = `backup/index.json`;
 
 const savePasswordInBackup = (password) => {
-    const backup = fs.readFileSync(BACKUP_PATH, 'utf-8');
+    const hasFile = !!fs.existsSync(BACKUP_PATH);
+
+    const backup = hasFile ? fs.readFileSync(BACKUP_PATH, 'utf-8') : '[]';
 
     const newBackup = JSON.parse(backup);
 

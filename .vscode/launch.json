@@ -9,7 +9,7 @@
             "request": "launch",
             "name": "Launch Program",
             "program": "${workspaceFolder}/src/index.js",
-            "console": "integratedTerminal",
+            "outputCapture": "std"
         }
     ]
 }

@@ -1,7 +1,7 @@
-const { generatePassword } = require('../generator/passwordGenerator');
-const { addPassword } = require('../client/notionClient');
-const { createPassword } = require('../schemas/passwordSchema');
-const { toPasswordResponse } = require('../factories/passwordFactory');
+const { generatePassword } = require('@src/generator/passwordGenerator');
+const { addPassword } = require('@src/client/notionClient');
+const { createPassword } = require('@src/schemas/passwordSchema');
+const { toPasswordResponse } = require('@src/factories/passwordFactory');
 
 module.exports = {
     generatePasswordOperation: async (request) => {

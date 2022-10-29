@@ -1,11 +1,9 @@
 require('dotenv').config();
+require('module-alias/register')
+
 const express = require('express');
-const fs = require('fs');
 
-const BACKUP_PATH = `${__dirname}/../backup/index.json`;
-fs.writeFileSync(BACKUP_PATH, '[]', 'utf-8');
-
-const routes = require('./routes');
+const routes = require('@src/routes');
 
 const app = express();
 
