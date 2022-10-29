@@ -3,6 +3,7 @@ const fs = require('fs');
 const { numbers, lowerCase, specialChars, upperCase } = require('../../constants');
 
 const PASSWORD_LENGTH = 16;
+const BACKUP_PATH = `${__dirname}/../../backup/index.json`;
 
 const savePasswordInBackup = (password) => {
     const backup = fs.readFileSync(BACKUP_PATH, 'utf-8');
