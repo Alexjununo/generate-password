@@ -13,6 +13,7 @@ apiRouter
     .use(cors())
     .use(bodyParser.json())
     .use(compression())
+    .use('/', (req, res) => res.send('Service is running'))
     .use('/password', passwordController.generatePassword);
 
 module.exports = apiRouter;
