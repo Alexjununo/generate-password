@@ -1,20 +1,19 @@
-const { Router } = require('express');
+const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
 const compression = require('compression');
-const methodOverride = require('method-override');
 
 const passwordController = require('@src/controllers/passwordController');
 
-const apiRouter = Router();
+const routes = express();
 
-apiRouter
-    .use(methodOverride('X-HTTP-Method-Override'))
-    .use(cors())
-    .use(bodyParser.json())
-    .use(compression())
-    .use('/password', passwordController.generatePassword);
+routes.use(cors());
+routes.use(bodyParser.json());
+routes.use(compression());
 
-module.exports = apiRouter;
+routes.get('/' , (req, res) => res.json({ message: 'Service is running', status: 200 }));
+routes.post('/password', passwordController.generatePassword);
+
+module.exports = routes;
 
 

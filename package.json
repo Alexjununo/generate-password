@@ -21,22 +21,25 @@
   },
   "dependencies": {
     "@notionhq/client": "2.2.1",
+    "awilix": "^8.0.0",
     "body-parser": "^1.20.1",
     "compression": "^1.7.4",
     "cors": "^2.8.5",
     "dotenv": "16.0.3",
     "express": "^4.18.2",
     "joi": "^17.6.4",
-    "method-override": "^3.0.0",
+    "log4js": "^6.7.0",
     "module-alias": "^2.2.2",
     "prompt-sync": "4.2.0"
   },
   "_moduleAliases": {
-    "@root"      : ".",
-    "@src"      : "./src",
-    "@backup" : "./backup",
-    "@constants"  : "./constants"
+    "@root": ".",
+    "@src": "./src",
+    "@backup": "./backup",
+    "@constants": "./constants",
+    "@logging": "./logging"
   },
-
-  "_moduleDirectories": ["node_modules_custom"]
+  "_moduleDirectories": [
+    "node_modules_custom"
+  ]
 }

@@ -2,7 +2,7 @@ const { generatePasswordOperation } = require('@src/operations/generatePasswordO
 
 module.exports = {
     generatePassword: async (req, res) => {
-        const password = await generatePasswordOperation(req.query);
+        const password = await generatePasswordOperation(req.body);
 
         return res.status(201).json(password);
     },
